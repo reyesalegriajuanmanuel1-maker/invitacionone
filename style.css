@@ -1,0 +1,287 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Primera sección estilo fiesta */
+.seccion-fiesta {
+  background: #f5f5f5;
+  padding: 20px 15px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 420px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.imagen-fiesta {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  margin: 15px auto;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  transition: transform 0.6s ease;
+  cursor: default;
+}
+
+.imagen-fiesta:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.mensaje-centrado {
+  background: #111;
+  color: gold;
+  padding: 18px 15px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 25px auto 0 auto;
+  max-width: 90%;
+  border-radius: 15px;
+  text-shadow:
+    0 0 5px gold,
+    0 0 10px goldenrod;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+/* Segunda sección estilo elegante */
+.invitacion {
+  background: rgba(10, 10, 10, 0.9);
+  padding: 35px 25px;
+  border: 3px solid gold;
+  border-radius: 25px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  margin: 40px auto 60px auto;
+  position: relative;
+  box-shadow:
+    0 0 30px gold,
+    inset 0 0 30px #a67c00;
+  backdrop-filter: blur(12px);
+  color: #ffd700;
+  font-weight: 600;
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+/* Nombre */
+.nombre {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  color: #ffda44;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  text-shadow:
+    0 0 10px #fff1a8,
+    0 0 20px gold,
+    0 0 30px goldenrod;
+  animation: textGlow 4s ease-in-out infinite alternate;
+}
+
+/* Subtítulo */
+.subtitulo {
+  font-size: 1.5rem;
+  color: #f5e68e;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 2.2s ease forwards;
+}
+
+/* Número */
+.numero-edad span {
+  font-size: 5rem;
+  font-weight: 900;
+  color: gold;
+  text-shadow:
+    0 0 25px #ffd700,
+    0 0 50px #ffa500,
+    0 0 80px #ffb84d;
+  animation: pulseGlow 3s ease-in-out infinite;
+  display: block;
+  margin: 15px 0 30px 0;
+  user-select: none;
+}
+
+/* Fecha */
+.fecha {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #ffdb70;
+  margin: 0 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 2.8s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Mensaje */
+.mensaje {
+  font-size: 1.1rem;
+  color: #fff6cc;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 3.4s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* Decoraciones */
+.decoracion-superior,
+.decoracion-inferior {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(90deg, #ffd700, #ffb300, #ffd700);
+  filter: drop-shadow(0 0 8px gold);
+  top: 0;
+  left: 0;
+  border-radius: 12px 12px 0 0;
+  animation: shine 4s linear infinite;
+}
+
+.decoracion-inferior {
+  top: auto;
+  bottom: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+/* WhatsApp botón */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 0 15px #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+  animation: pulseShadow 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+  box-shadow: 0 0 25px #25D366, 0 0 50px #128C7E;
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+}
+
+/* Animaciones */
+
+/* Fade + subir */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow text */
+@keyframes glowText {
+  0%, 100% {
+    text-shadow:
+      0 0 10px #fff1a8,
+      0 0 20px gold,
+      0 0 30px goldenrod;
+  }
+  50% {
+    text-shadow:
+      0 0 15px #fff8b0,
+      0 0 30px #ffd700,
+      0 0 50px #ffca28;
+  }
+}
+
+/* Pulso para número */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 25px #ffd700,
+      0 0 50px #ffa500,
+      0 0 80px #ffb84d;
+    color: #ffd700;
+  }
+  50% {
+    text-shadow:
+      0 0 40px #fff8a0,
+      0 0 70px #ffb700,
+      0 0 110px #ffcc60;
+    color: #fff4b3;
+  }
+}
+
+/* FadeIn simple */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Luz decorativa barra */
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Botón WhatsApp sombra pulso */
+@keyframes pulseShadow {
+  0%, 100% {
+    box-shadow: 0 0 15px #25D366;
+  }
+  50% {
+    box-shadow: 0 0 30px #25D366, 0 0 40px #128C7E;
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .nombre {
+    font-size: 2.3rem;
+  }
+
+  .numero-edad span {
+    font-size: 4rem;
+  }
+
+  .fecha {
+    font-size: 1.5rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+  }
+
+  .seccion-fiesta {
+    padding: 15px 10px;
+  }
+}
