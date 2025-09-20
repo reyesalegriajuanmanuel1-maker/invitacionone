@@ -1,4 +1,4 @@
-/* Reset básico */
+/* ==== RESET ==== */
 * {
   margin: 0;
   padding: 0;
@@ -6,157 +6,138 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1a1a1a, #000000);
+  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  padding: 0;
-  margin: 0;
   min-height: 100vh;
+  padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
-/* Primera sección estilo fiesta */
+/* ==== SECCIÓN FIESTA ==== */
 .seccion-fiesta {
-  background: #f5f5f5;
-  padding: 20px 15px;
+  background: linear-gradient(to top right, #fff9e6, #fff1cc);
+  padding: 25px 20px;
   text-align: center;
-  border-radius: 15px;
-  max-width: 420px;
-  margin: 20px auto;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-  animation: fadeInUp 1.6s ease forwards;
+  border-radius: 20px;
+  max-width: 450px;
+  margin: 30px auto;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .imagen-fiesta {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
   border-radius: 20px;
-  margin: 15px auto;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-  transition: transform 0.6s ease;
-  cursor: default;
+  margin: 20px 0;
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
 .imagen-fiesta:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.03);
 }
 
 .mensaje-centrado {
-  background: #111;
-  color: gold;
-  padding: 18px 15px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 25px auto 0 auto;
-  max-width: 90%;
+  background: #000;
+  color: #ffe680;
+  padding: 18px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 20px;
   border-radius: 15px;
-  text-shadow:
-    0 0 5px gold,
-    0 0 10px goldenrod;
+  box-shadow: inset 0 0 10px rgba(255, 255, 200, 0.2);
+  text-shadow: 0 0 6px #ffd700;
   animation: glowText 3s ease-in-out infinite alternate;
 }
 
-/* Segunda sección estilo elegante */
+/* ==== SECCIÓN INVITACIÓN ==== */
 .invitacion {
-  background: rgba(10, 10, 10, 0.9);
-  padding: 35px 25px;
-  border: 3px solid gold;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 25px;
+  border: 2px solid #ffd700;
   border-radius: 25px;
-  max-width: 420px;
-  width: 90%;
+  max-width: 450px;
+  margin: 40px auto;
   text-align: center;
-  margin: 40px auto 60px auto;
-  position: relative;
   box-shadow:
-    0 0 30px gold,
-    inset 0 0 30px #a67c00;
-  backdrop-filter: blur(12px);
-  color: #ffd700;
-  font-weight: 600;
-  animation: fadeInUp 1.8s ease forwards;
+    0 0 30px rgba(255, 215, 0, 0.2),
+    inset 0 0 15px rgba(255, 215, 0, 0.1);
+  animation: fadeInUp 1.3s ease-out forwards;
 }
 
-/* Nombre */
+/* ==== TEXTOS ==== */
 .nombre {
   font-family: 'Great Vibes', cursive;
   font-size: 2.8rem;
-  color: #ffda44;
+  color: #ffe066;
   margin-bottom: 10px;
-  letter-spacing: 1.2px;
-  text-shadow:
-    0 0 10px #fff1a8,
-    0 0 20px gold,
-    0 0 30px goldenrod;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px gold, 0 0 25px #ffcc00;
   animation: textGlow 4s ease-in-out infinite alternate;
 }
 
-/* Subtítulo */
 .subtitulo {
-  font-size: 1.5rem;
-  color: #f5e68e;
-  margin-bottom: 25px;
-  letter-spacing: 1.5px;
-  font-weight: 600;
+  font-size: 1.4rem;
+  color: #fff5b3;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
   opacity: 0;
-  animation: fadeIn 2.2s ease forwards;
+  animation: fadeIn 1.5s ease forwards;
 }
 
-/* Número */
 .numero-edad span {
   font-size: 5rem;
-  font-weight: 900;
-  color: gold;
-  text-shadow:
-    0 0 25px #ffd700,
-    0 0 50px #ffa500,
-    0 0 80px #ffb84d;
+  font-weight: 800;
+  color: #ffd700;
+  text-shadow: 0 0 30px #ffcc00, 0 0 60px #ffa500;
   animation: pulseGlow 3s ease-in-out infinite;
-  display: block;
-  margin: 15px 0 30px 0;
-  user-select: none;
+  margin: 20px 0;
 }
 
-/* Fecha */
 .fecha {
   font-family: 'Great Vibes', cursive;
-  font-size: 1.8rem;
-  color: #ffdb70;
-  margin: 0 0 30px 0;
-  opacity: 0;
-  animation: fadeIn 2.8s ease forwards;
-  animation-delay: 1s;
+  font-size: 1.6rem;
+  color: #ffef99;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease forwards;
 }
 
-/* Mensaje */
 .mensaje {
   font-size: 1.1rem;
-  color: #fff6cc;
+  color: #fff2cc;
   line-height: 1.6;
-  opacity: 0;
-  animation: fadeIn 3.4s ease forwards;
-  animation-delay: 1.5s;
+  margin-top: 20px;
+  animation: fadeIn 2.4s ease forwards;
 }
 
-/* Decoraciones */
+/* ==== DECORACIONES ==== */
 .decoracion-superior,
 .decoracion-inferior {
   position: absolute;
   width: 100%;
   height: 12px;
-  background: linear-gradient(90deg, #ffd700, #ffb300, #ffd700);
-  filter: drop-shadow(0 0 8px gold);
+  background: linear-gradient(to right, #ffd700, #ffb300, #ffd700);
+  filter: drop-shadow(0 0 10px #ffd700);
+  animation: shine 6s linear infinite;
+}
+
+.decoracion-superior {
   top: 0;
   left: 0;
-  border-radius: 12px 12px 0 0;
-  animation: shine 4s linear infinite;
+  border-radius: 10px 10px 0 0;
 }
 
 .decoracion-inferior {
-  top: auto;
   bottom: 0;
-  border-radius: 0 0 12px 12px;
+  left: 0;
+  border-radius: 0 0 10px 10px;
 }
 
-/* WhatsApp botón */
+/* ==== BOTÓN WHATSAPP ==== */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -164,30 +145,21 @@ body {
   width: 60px;
   height: 60px;
   z-index: 1000;
-  border-radius: 50%;
   background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 50%;
   box-shadow: 0 0 15px #25D366;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: box-shadow 0.3s ease;
-  animation: pulseShadow 3s ease-in-out infinite;
-}
-
-.whatsapp-float:hover {
-  box-shadow: 0 0 25px #25D366, 0 0 50px #128C7E;
-  transform: scale(1.1);
+  align-items: center;
+  animation: pulseShadow 2.5s ease-in-out infinite;
 }
 
 .whatsapp-float img {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+  width: 34px;
+  height: 34px;
 }
 
-/* Animaciones */
-
-/* Fade + subir */
+/* ==== ANIMACIONES ==== */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -199,51 +171,29 @@ body {
   }
 }
 
-/* Glow text */
-@keyframes glowText {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes textGlow {
   0%, 100% {
-    text-shadow:
-      0 0 10px #fff1a8,
-      0 0 20px gold,
-      0 0 30px goldenrod;
+    text-shadow: 0 0 10px #fff1a8, 0 0 20px gold, 0 0 30px goldenrod;
   }
   50% {
-    text-shadow:
-      0 0 15px #fff8b0,
-      0 0 30px #ffd700,
-      0 0 50px #ffca28;
+    text-shadow: 0 0 20px #fff8a0, 0 0 35px #ffd700, 0 0 55px #ffcc60;
   }
 }
 
-/* Pulso para número */
 @keyframes pulseGlow {
   0%, 100% {
-    text-shadow:
-      0 0 25px #ffd700,
-      0 0 50px #ffa500,
-      0 0 80px #ffb84d;
-    color: #ffd700;
+    text-shadow: 0 0 20px #ffd700, 0 0 40px #ffa500;
   }
   50% {
-    text-shadow:
-      0 0 40px #fff8a0,
-      0 0 70px #ffb700,
-      0 0 110px #ffcc60;
-    color: #fff4b3;
+    text-shadow: 0 0 35px #fff4a0, 0 0 60px #ffb700;
   }
 }
 
-/* FadeIn simple */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Luz decorativa barra */
 @keyframes shine {
   0% {
     background-position: 0 0;
@@ -253,28 +203,27 @@ body {
   }
 }
 
-/* Botón WhatsApp sombra pulso */
 @keyframes pulseShadow {
   0%, 100% {
     box-shadow: 0 0 15px #25D366;
   }
   50% {
-    box-shadow: 0 0 30px #25D366, 0 0 40px #128C7E;
+    box-shadow: 0 0 30px #25D366, 0 0 50px #128C7E;
   }
 }
 
-/* Responsive */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 500px) {
   .nombre {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 
   .numero-edad span {
-    font-size: 4rem;
+    font-size: 4.2rem;
   }
 
   .fecha {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .mensaje {
@@ -282,6 +231,10 @@ body {
   }
 
   .seccion-fiesta {
-    padding: 15px 10px;
+    padding: 20px 15px;
+  }
+
+  .invitacion {
+    padding: 30px 20px;
   }
 }
