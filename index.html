@@ -14,7 +14,11 @@
     <img src="img/globos.png" alt="Globos 40 años" class="imagen-fiesta"/>
     
     <div class="mensaje-centrado">
-      <p>La vida comienza a los <strong>40</strong>, lo anterior fue solamente práctica.</p>
+      <p style="text-align: center;">
+  La vida comienza a <br>
+  los 40, lo anterior fue <br>
+  solamente práctica.
+</p>
     </div>
 
     <img src="img/pastel.png" alt="Pastel 40 años" class="imagen-fiesta"/>
@@ -42,10 +46,82 @@
     <div class="decoracion-inferior"></div>
   </section>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Confirmar asistencia">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/>
-  </a>
+  <!-- SECCIÓN CUENTA REGRESIVA -->
+<section class="cuenta-regresiva">
+  <h2>PARA EL GRAN DÍA FALTAN:</h2>
+  <div id="contador">
+    <div><span id="dias">00</span><p>días</p></div>
+    <div><span id="horas">00</span><p>horas</p></div>
+    <div><span id="minutos">00</span><p>minutos</p></div>
+    <div><span id="segundos">00</span><p>segundos</p></div>
+  </div>
+</section>
+
+<script>
+  // Fecha del evento (25 octubre 2025, 8:00 PM)
+  const fechaEvento = new Date("Oct 25, 2025 20:00:00").getTime();
+
+  const intervalo = setInterval(() => {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    if (diferencia <= 0) {
+      clearInterval(intervalo);
+      document.getElementById("contador").innerHTML = "<p>¡Llegó el gran día! 🎉</p>";
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").innerText = dias;
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
+  }, 1000);
+</script>
+
+<!-- SECCIÓN ¿DÓNDE? -->
+<section class="ubicacion">
+  <h2>¿DÓNDE?</h2>
+  <img src="img/lugar.png" alt="Lugar del evento" class="imagen-ubicacion"/>
+  <p class="direccion">Salón de Eventos Miramar, Av Juventino Rosas 1223, Maria de la Piedad, 96410 Coatzacoalcos, Ver.</p>
+  <a href="https://maps.app.goo.gl/Ke5Ax15vDZvcY9w97" target="_blank" class="boton-ubicacion">Ver ubicación</a>
+</section>
+
+<!-- SECCIÓN CONFIRMACIÓN ELEGANTE -->
+<section class="confirmacion">
+  <h2>CONFIRMACIÓN DE ASISTENCIA</h2>
+  <p class="nombre-invitado">JOSE CANDIDO</p>
+  <div class="botones-asistencia">
+    <a href="https://wa.me/529212335158?text=Hola%2C%20José%20Cándido%20dice%20SÍ%20ASISTIRÉ" target="_blank" class="boton-si">SÍ, ASISTIRÉ</a>
+    <a href="https://wa.me/529212335158?text=Hola%2C%20José%20Cándido%20dice%20NO%20ASISTIRÉ" target="_blank" class="boton-no">NO ASISTIRÉ</a>
+  </div>
+</section>
+<!-- SECCIÓN SUGERENCIA DE REGALO -->
+<section class="regalo">
+  <h2>SUGERENCIA DE REGALO</h2>
+  <div class="contenido-regalo">
+    <img src="img/regalo.png" alt="Icono regalo" class="icono-regalo"/>
+    <p>Su presencia y buenos deseos son suficientes para mí,<br>
+    y en caso de que deseen hacerme un obsequio, pueden traerlo.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN MENSAJE FINAL ELEGANTE -->
+<section class="mensaje-final-elegante">
+  <div class="decoracion-final-superior"></div>
+  <p class="brindis">
+    Brindo por la salud que tengo y también por mi familia y amigos.<br>
+    ¡Gracias por asistir!
+  </p>
+  <p class="nombre-final">JOSE CANDIDO</p>
+  <p class="cumpleanos">Mi Cumpleaños #40</p>
+  <div class="decoracion-final-inferior"></div>
+</section>
+
 
 </body>
 </html>
